@@ -33,6 +33,10 @@ gates:
     with:
       rule_file: ai-rule-template.yaml
 
+  - type: ai-rule
+    with:
+      rule_file: goal-alignment-stub.yaml
+
 # Ensure */*/AGENTS.md files are updated when code changes
   - type: agents-md-sync
     id: agents_md_sync
