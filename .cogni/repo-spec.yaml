@@ -4,7 +4,7 @@
 schema_version: '0.1.4'
 
 intent:
-  name: test-repo
+  name: preview-test-repo
   goals:
     - Clear, scoped goals of the project
   non_goals:
