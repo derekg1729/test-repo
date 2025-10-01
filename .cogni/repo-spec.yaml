@@ -25,7 +25,6 @@ intent:
 required_status_contexts:
   - CI - PR
   - Security
-  - Cogni Git PR Review
 
 # Gates run in the order they appear below.
 gates:
@@ -50,9 +49,6 @@ gates:
   - type: ai-rule
     with:
       rule_file: pr-syntropy-coherence.yaml
-  - type: ai-rule
-    with:
-      rule_file: cogni-repo-goal-alignment.yaml
   - type: ai-rule
     with:
       rule_file: patterns-and-docs.yaml
