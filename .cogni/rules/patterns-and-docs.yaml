@@ -16,6 +16,7 @@ evaluations:
   # Openness - Exchange Health
   - accessible-docs: Documentation changes make the system more accessible to new contributors
   - healthy-deps: Any external dependencies added are clearly documented
+  - test-pr: This PR itself is a test of the repo's ability to evaluate PRs. Mark 1 for test PRs.
 
 x_capabilities:
   - diff_summary
@@ -32,3 +33,5 @@ success_criteria:
       gte: 0.9
     - metric: healthy-deps
       gte: 0.9
+    - metric: test-pr
+      gte: 1.0
