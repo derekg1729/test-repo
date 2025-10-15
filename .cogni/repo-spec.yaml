@@ -4,7 +4,7 @@
 schema_version: '0.1.4'
 
 intent:
-  name: test-repo
+  name: preview-test-repo
   goals:
     - Clear, scoped goals of the project
   non_goals:
@@ -31,11 +31,11 @@ gates:
 
   - type: ai-rule
     with:
-      rule_file: ai-rule-template.yaml
+      rule_file: strict-pr-mapping.yaml
 
   - type: ai-rule
     with:
-      rule_file: goal-alignment-stub.yaml
+      rule_file: multi-goal-test.yaml
 
 # Ensure */*/AGENTS.md files are updated when code changes
   - type: agents-md-sync
