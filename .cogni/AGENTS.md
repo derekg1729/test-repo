@@ -29,3 +29,5 @@ threshold: 0.7
 2. Builds evidence: PR title/body + diff summary + repo goals
 3. Calls AI provider (MVP stub)
 4. Applies threshold: score >= 0.7 → pass, else fail
+
+Hi - this is a test.
