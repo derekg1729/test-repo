@@ -18,10 +18,6 @@ evaluations:
   - healthy-deps: Any external dependencies added are clearly documented
   - test-pr: This PR itself is a test of the repo's ability to evaluate PRs. Mark 1 for test PRs.
 
-x_capabilities:
-  - diff_summary
-  - file_patches
-
 success_criteria:
   neutral_on_missing_metrics: true
   any_of:
