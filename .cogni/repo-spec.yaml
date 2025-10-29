@@ -2,41 +2,14 @@ schema_version: '0.1.4'
 
 intent:
   name: cogni-git-review
-<<<<<<< Updated upstream
-  goals:
-    - Enforce deterministic, machine-checkable PR hygiene via a single required check run
-    - Seamlessly fit developer workflows and existing Repo management tools (Github Actions, Allstar, Checks API, etc.)
-    - Deliver AI-powered advisory review to keep repo aligned to repo goals, and avoid scope creep.
-    - Be dogfoodable on this repo and trivially adoptable via intallation and dropping .cogni/repo-spec.yaml in a repo.
-    - Stay extensible toward CI/CD orchestration and auto-merge via LangGraph.js workflows
-    - Provide fast tri-state verdicts (success|failure|neutral) with fail-safe neutral on errors
-    - Integrate with CogniMemory MCP for PR context, audit trails, and future codebase indexing
-    - Scale org-wide with per-repo opt-in and graceful defaults when spec is absent
-  non_goals:
-    - Re-implementing mature OSS scanners, linters, or policy managers. Strong preference towards integration over duplication
-    - Long-running or heavy in-process analysis that degrades PR latency (batch/offload instead)
-    - Storing secrets or sensitive artifacts in the app; use provider-native secrets
-    - Subjective style enforcement beyond explicit repo rules/policies
-    - Destructive git operations or auto-merge without explicit, policy-driven safeguards and auditability
-    - Vendor lock-in or proprietary-only integrations that block open-source contributors
 
 cogni_dao:
   dao_contract: "0xF480b40bF6d6C8765AA51b7C913cecF23c79E5C6"
   plugin_contract: "0xDD5bB976336145E8372C10CEbf2955c878a32308" 
   signal_contract: "0x804CB616EAddD7B6956E67B1D8b2987207160dF7"
   chain_id: "11155111"
-
-
-# CI checks that must be required-by-branch-protection and green to merge.
-# These are *status context names*, not workflow file names. 
-# Cogni confirms these are enforced via Allstar.
-required_status_contexts:
-  - CI - PR
-  - Security
-
-=======
+  base_url: "proposal.cognidao.org"
   
->>>>>>> Stashed changes
 # Gates run in the order they appear below.
 gates:
   # Governance policy - check required workflows exist and match contexts
