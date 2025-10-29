@@ -2,6 +2,7 @@ schema_version: '0.1.4'
 
 intent:
   name: cogni-git-review
+<<<<<<< Updated upstream
   goals:
     - Enforce deterministic, machine-checkable PR hygiene via a single required check run
     - Seamlessly fit developer workflows and existing Repo management tools (Github Actions, Allstar, Checks API, etc.)
@@ -33,6 +34,9 @@ required_status_contexts:
   - CI - PR
   - Security
 
+=======
+  
+>>>>>>> Stashed changes
 # Gates run in the order they appear below.
 gates:
   # Governance policy - check required workflows exist and match contexts
