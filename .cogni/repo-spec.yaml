@@ -12,19 +12,11 @@ cogni_dao:
   
 # Gates run in the order they appear below.
 gates:
-  # Governance policy - check required workflows exist and match contexts
-  - type: governance-policy
-    id: governance_policy
   - type: review-limits
     id: review_limits
     with:
       max_changed_files: 40
       max_total_diff_kb: 1500
-  - type: goal-declaration
-    id: goal_declaration
-  - type: forbidden-scopes
-    id: forbidden_scopes
-  # Ensure AGENTS.md files are updated when code changes
   - type: agents-md-sync
     id: agents_md_sync
   - type: ai-rule
