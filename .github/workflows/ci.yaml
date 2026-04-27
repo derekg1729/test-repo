@@ -1,7 +1,7 @@
 name: CI - PR
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 permissions:
   contents: read
 concurrency:
@@ -12,15 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          # Auto-caching is enabled when package.json has "packageManager"
-          # Otherwise: cache: 'npm'
+          node-version: "20"
+          cache: "pnpm"
       - name: Repository policy check
         run: |
           npm install -g repolinter
           repolinter lint -c repolinter.json .
-      - run: npm ci
-      - run: npm run lint --if-present
-      - run: npm test
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint --if-present
+      - run: pnpm test
