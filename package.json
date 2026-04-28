@@ -1,0 +1,11 @@
+{
+  "name": "test-repo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Cogni git-review test fixture repo. Carries multi-node directory shape for fixture-PR scenarios.",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "lint": "echo \"no-op lint\"",
+    "test": "echo \"no-op test\""
+  }
+}
